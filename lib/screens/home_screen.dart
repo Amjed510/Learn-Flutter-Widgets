@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tebale_app/screens/buttons_screen.dart';
 import 'package:tebale_app/screens/images_screen.dart';
 import 'package:tebale_app/screens/radio_screen.dart';
 import 'package:tebale_app/screens/table_screen.dart';
@@ -22,7 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           CastomCard(titleText: "Table Widget", page: TableScreen()),
           CastomCard(titleText: "Image Widget", page: ImageScreen()),
-            CastomCard(titleText: "Radio Widget", page: RadioScreen()),
+          CastomCard(titleText: "Radio Widget", page: RadioScreen()),
+          CastomCard(titleText: "Buttons Widget", page: ButtonsScreen()),
         ],
       ),
     );
