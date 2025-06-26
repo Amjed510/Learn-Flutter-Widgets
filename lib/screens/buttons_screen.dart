@@ -8,6 +8,8 @@ class ButtonsScreen extends StatefulWidget {
   State<ButtonsScreen> createState() => _ButtonsScreenState();
 }
 
+bool isSwiched = false;
+
 class _ButtonsScreenState extends State<ButtonsScreen> {
   @override
   Widget build(BuildContext context) {
@@ -71,6 +73,21 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                   );
                 },
                 child: Text("Click FilledButton tonal"),
+              ),
+
+              SizedBox(height: 15),
+              Text("Switch"),
+              SizedBox(height: 15),
+              Switch(
+                activeColor: Colors.green,
+                // inactiveThumbColor: Colors.grey,
+                inactiveTrackColor: Colors.grey,
+                value: isSwiched,
+                onChanged: (value) {
+                  setState(() {
+                    isSwiched = value;
+                  });
+                },
               ),
             ],
           ),

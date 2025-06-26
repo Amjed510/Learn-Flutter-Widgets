@@ -47,6 +47,9 @@ class _TableScreenState extends State<TableScreen> {
       appBar: CustomAppbar(title: "إدارة الموظفين"),
       body: ListView(
         children: [
+          SizedBox(height: 20),
+          Center(child: Text("DataTable")),
+          SizedBox(height: 15),
           DataTable(
             columnSpacing: 28.0,
             headingRowColor: MaterialStateProperty.all(
@@ -94,6 +97,60 @@ class _TableScreenState extends State<TableScreen> {
                     ],
                   );
                 }).toList(),
+          ),
+
+          SizedBox(height: 20),
+          Center(child: Text("Table")),
+          SizedBox(height: 15),
+          Container(
+            padding: EdgeInsets.all(20),
+            child: Table(
+              border: TableBorder.all(color: Colors.black),
+              children: [
+                TableRow(
+                  children: [
+                    Column(
+                      children: [
+                        Icon(
+                          Icons.shop_2_outlined,
+                          color: Theme.of(context).primaryColor,
+                          size: 20,
+                        ),
+                        Text("Shop"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(
+                          Icons.card_travel_outlined,
+                          color: Theme.of(context).primaryColor,
+                          size: 20,
+                        ),
+                        Text("Cart"),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Icon(
+                          Icons.person_2_outlined,
+                          color: Theme.of(context).primaryColor,
+                          size: 20,
+                        ),
+                        Text("Profile"),
+                      ],
+                    ),
+                  ],
+                ),
+
+                TableRow(
+                  children: [
+                    Column(children: [Text("Shop")]),
+                    Column(children: [Text("Cart")]),
+                    Column(children: [Text("Profile")]),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
